@@ -349,6 +349,27 @@ void handleSocketIoGetRest(Context ctx, string rest)
     handleSocketIoGet(ctx);
 }
 
+void handleSocketIoUnified(Context ctx)
+{
+    import andaime.http.websocket : checkUpgradeRequest, WsHandshake;
+    import andaime.web.websocket : runWebSocket;
+    const(char)[] key;
+    if (checkUpgradeRequest(ctx.request, key) == WsHandshake.ok)
+    {
+        auto ws = handleSocketIoWs();
+        runWebSocket(ctx, ws);
+    }
+    else
+    {
+        handleSocketIoGet(ctx);
+    }
+}
+
+void handleSocketIoUnifiedRest(Context ctx, string rest)
+{
+    handleSocketIoUnified(ctx);
+}
+
 void handleSocketIoPost(Context ctx)
 {
     ctx.response.status = 200;
@@ -364,10 +385,8 @@ void handleSocketIoPostRest(Context ctx, string rest)
 /// Registers Socket.IO WebSocket endpoints and polling fallback on the Andaime App.
 void installSocketIo(App app)
 {
-    app.ws!("/socket.io", handleSocketIoWs);
-    app.ws!("/socket.io/{*rest}", handleSocketIoWsRest);
-    app.get!("/socket.io", handleSocketIoGet);
-    app.get!("/socket.io/{*rest}", handleSocketIoGetRest);
+    app.get!("/socket.io", handleSocketIoUnified);
+    app.get!("/socket.io/{*rest}", handleSocketIoUnifiedRest);
     app.post!("/socket.io", handleSocketIoPost);
     app.post!("/socket.io/{*rest}", handleSocketIoPostRest);
 }
