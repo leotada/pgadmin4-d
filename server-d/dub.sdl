@@ -1,0 +1,23 @@
+name "pgadmin-d"
+description "pgAdmin 4 backend ported to D on the andaime web framework"
+license "PostgreSQL"
+targetType "executable"
+targetName "pgadmin4-d"
+targetPath "bin"
+sourcePaths "source"
+importPaths "source"
+stringImportPaths "resources"
+mainSourceFile "source/app.d"
+dependency "andaime" path="../../andaime"
+libs "dl" "util"
+toolchainRequirements dmd=">=2.112.0" ldc=">=1.42.0" gdc="no"
+
+configuration "default" {
+}
+
+configuration "jinja-cli" {
+    targetName "jinja-cli"
+    mainSourceFile "tools/jinja_cli.d"
+    excludedSourceFiles "source/app.d" "tools/driver_probe.d"
+    sourcePaths "source" "tools"
+}

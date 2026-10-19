@@ -1,0 +1,8309 @@
+[
+ {
+  "name": "kerberos",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "oauth2",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "webserver",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "about",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "authenticate",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "browser",
+  "label": "Browser",
+  "categories": [
+   {
+    "name": "display",
+    "label": "Display",
+    "preferences": [
+     {
+      "name": "show_system_objects",
+      "label": "Show system objects?",
+      "type": "boolean",
+      "default": false,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_empty_coll_nodes",
+      "label": "Show empty object collections?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If turned off, then all object collections which are empty will be hidden from browser tree.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_column_datatype",
+      "label": "Show column data type?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If turned off, then the data types of the columns will not be displayed alongside their column names.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_user_defined_templates",
+      "label": "Show template databases?",
+      "type": "boolean",
+      "default": false,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "hide_shared_server",
+      "label": "Hide shared servers?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "If set to True, all shared servers will be hidden from the browser tree.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "browser_tree_state_save_interval",
+      "label": "Object explorer tree state saving interval",
+      "type": "integer",
+      "default": 30,
+      "help_str": "Object explorer state saving interval in seconds. Use -1 to disable the tree saving mechanism.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "confirm_on_refresh_close",
+      "label": "Confirm on close or refresh?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "Confirm that closure or refresh of the browser or browser tab is intended before proceeding.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "confirm_on_properties_close",
+      "label": "Confirm before Close/Reset in object properties dialog?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "Confirm before closing or resetting the changes in the properties dialog for an object if the changes are not saved.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "auto_expand_sole_children",
+      "label": "Auto-expand sole children",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If a treeview node is expanded and has only a single child, automatically expand the child node as well.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_server_color_indicator",
+      "label": "Show server color indicator in panel tabs?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "If enabled, a colored circle indicator will be shown in panel tabs (Query Tool, ERD Tool, etc.) matching the server's custom background color.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "properties",
+    "label": "Properties",
+    "preferences": [
+     {
+      "name": "table_row_count_threshold",
+      "label": "Count rows if estimated less than",
+      "type": "integer",
+      "default": 2000,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "pgagent_row_threshold",
+      "label": "Maximum job history rows",
+      "type": "integer",
+      "default": 250,
+      "help_str": "The maximum number of history rows to show on the Statistics tab for pgAgent jobs.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 9999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "processes",
+    "label": "Processes",
+    "preferences": [
+     {
+      "name": "process_retain_days",
+      "label": "Process details/logs retention days",
+      "type": "integer",
+      "default": 5,
+      "help_str": "After this many days, the process info and logs will be automatically cleared.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "keyboard_shortcuts",
+    "label": "Keyboard shortcuts",
+    "preferences": [
+     {
+      "name": "browser_tree",
+      "label": "Object Explorer",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 66,
+        "char": "b"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "toggle_object_explorer",
+      "label": "Toggle Object Explorer",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 66,
+        "char": "b"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "tabbed_panel_backward",
+      "label": "Tabbed panel backward",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 91,
+        "char": "["
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "close_tab_panel",
+      "label": "Close tab panel",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": true,
+       "control": true,
+       "key": {
+        "key_code": 87,
+        "char": "w"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "tabbed_panel_forward",
+      "label": "Tabbed panel forward",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 93,
+        "char": "]"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "main_menu_file",
+      "label": "File main menu",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 70,
+        "char": "f"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "main_menu_object",
+      "label": "Object main menu",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 79,
+        "char": "o"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "main_menu_tools",
+      "label": "Tools main menu",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 76,
+        "char": "l"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "main_menu_help",
+      "label": "Help main menu",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 72,
+        "char": "h"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "sub_menu_query_tool",
+      "label": "Open query tool",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 81,
+        "char": "q"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "sub_menu_view_data",
+      "label": "View data",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 86,
+        "char": "v"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "sub_menu_search_objects",
+      "label": "Search objects",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 83,
+        "char": "s"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "sub_menu_create",
+      "label": "Create object",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 78,
+        "char": "n"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "sub_menu_properties",
+      "label": "Edit object properties",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 69,
+        "char": "e"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "sub_menu_delete",
+      "label": "Drop object",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 68,
+        "char": "d"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "direct_debugging",
+      "label": "Direct debugging",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 71,
+        "char": "g"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "sub_menu_refresh",
+      "label": "Refresh object explorer",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": false,
+       "key": {
+        "key_code": 116,
+        "char": "F5"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "add_grid_row",
+      "label": "Add grid row",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": true,
+       "control": true,
+       "key": {
+        "key_code": 65,
+        "char": "a"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "open_quick_search",
+      "label": "Quick Search",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": true,
+       "control": true,
+       "key": {
+        "key_code": 70,
+        "char": "f"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "tab_settings",
+    "label": "Tab settings",
+    "preferences": [
+     {
+      "name": "dynamic_tabs",
+      "label": "Dynamic tab size",
+      "type": "boolean",
+      "default": false,
+      "help_str": "If set to True, the tabs will take full size as per the title. This will also apply to already opened tabs.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "qt_tab_title_placeholder",
+      "label": "Query tool tab title",
+      "type": "text",
+      "default": "%DATABASE%/%USERNAME%@%SERVER%",
+      "help_str": "Supported placeholders are %DATABASE%, %USERNAME%, and %SERVER%. Users can provide any string with or without placeholders of their choice. A blank title will revert to the default.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "vw_edt_tab_title_placeholder",
+      "label": "View/Edit data tab title",
+      "type": "text",
+      "default": "%SCHEMA%.%TABLE%/%DATABASE%/%USERNAME%@%SERVER%",
+      "help_str": "Supported placeholders are %SCHEMA%, %TABLE%, %DATABASE%, %USERNAME%, and %SERVER%. Users can provide any string with or without placeholders of their choice. A blank title will revert to the default.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "debugger_tab_title_placeholder",
+      "label": "Debugger tab title",
+      "type": "text",
+      "default": "%FUNCTION%(%ARGS%)",
+      "help_str": "Supported placeholders are %FUNCTION%, %ARGS%, %SCHEMA%, and %DATABASE%. Users can provide any string with or without placeholders of their choice. A blank title will revert to the default.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "new_browser_tab_open",
+      "label": "Open in new browser tab",
+      "type": "select",
+      "default": null,
+      "help_str": "Select Query Tool, Debugger, Schema Diff, ERD Tool, or PSQL Tool from the drop-down to open that module in a new browser tab.",
+      "control_props": {
+       "multiple": true,
+       "allowClear": false,
+       "tags": true,
+       "first_empty": false,
+       "selectOnClose": false,
+       "emptyOptions": true,
+       "tokenSeparators": [
+        ","
+       ],
+       "placeholder": "Select open new tab..."
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "Query Tool",
+        "value": "qt"
+       },
+       {
+        "label": "Debugger",
+        "value": "debugger"
+       },
+       {
+        "label": "Schema Diff",
+        "value": "schema_diff"
+       },
+       {
+        "label": "ERD Tool",
+        "value": "erd_tool"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "breadcrumbs",
+    "label": "Object Breadcrumbs",
+    "preferences": [
+     {
+      "name": "breadcrumbs_enable",
+      "label": "Enable object breadcrumbs?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "Enable breadcrumbs to show the complete path of an object in the object explorer. The breadcrumbs are displayed on object mouse hover.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "breadcrumbs_show_comment",
+      "label": "Show comment with object breadcrumbs?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "Show object comment along with breadcrumbs.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "node",
+    "label": "Nodes",
+    "preferences": [
+     {
+      "name": "show_node_database",
+      "label": "Databases",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_cast",
+      "label": "Casts",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_event_trigger",
+      "label": "Event Triggers",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_extension",
+      "label": "Extensions",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_foreign_data_wrapper",
+      "label": "Foreign Data Wrappers",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_foreign_server",
+      "label": "Foreign Servers",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_user_mapping",
+      "label": "User Mappings",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_language",
+      "label": "Languages",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_publication",
+      "label": "Publications",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_schema",
+      "label": "Schemas",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_aggregate",
+      "label": "Aggregates",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_catalog_object",
+      "label": "Catalog Objects",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_collation",
+      "label": "Collations",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_domain",
+      "label": "Domains",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_domain_constraints",
+      "label": "Domain Constraints",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_foreign_table",
+      "label": "Foreign Tables",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_trigger",
+      "label": "Triggers",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_constraints",
+      "label": "Constraints",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_check_constraint",
+      "label": "Check Constraints",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_exclusion_constraint",
+      "label": "Exclusion Constraints",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_foreign_key",
+      "label": "Foreign Keys",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_primary_key",
+      "label": "Primary Key",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_unique_constraint",
+      "label": "Unique Constraint",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_foreign_table_column",
+      "label": "Columns",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_fts_configuration",
+      "label": "FTS Configurations",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_fts_dictionary",
+      "label": "FTS Dictionaries",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_fts_parser",
+      "label": "FTS Parsers",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_fts_template",
+      "label": "FTS Templates",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_function",
+      "label": "Functions",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_trigger_function",
+      "label": "Trigger Functions",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_procedure",
+      "label": "Procedures",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_operator",
+      "label": "Operators",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_package",
+      "label": "Packages",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_edbfunc",
+      "label": "Package Functions",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_edbproc",
+      "label": "Package Procedures",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_edbvar",
+      "label": "Variables",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_sequence",
+      "label": "Sequences",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_synonym",
+      "label": "Synonyms",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_table",
+      "label": "Tables",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_column",
+      "label": "Columns",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_compound_trigger",
+      "label": "Compound Triggers",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_index",
+      "label": "Indexes",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_partition",
+      "label": "Partitions",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_row_security_policy",
+      "label": "RLS Policies",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_rule",
+      "label": "Rules",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_type",
+      "label": "Types",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_view",
+      "label": "Views",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_mview",
+      "label": "Materialized Views",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_catalog",
+      "label": "Catalogs",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_subscription",
+      "label": "Subscriptions",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_dbms_job_scheduler",
+      "label": "DBMS Job Scheduler",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_dbms_job",
+      "label": "DBMS Jobs",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_dbms_program",
+      "label": "DBMS Programs",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_dbms_schedule",
+      "label": "DBMS Schedules",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_pga_job",
+      "label": "pgAgent Jobs",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_pga_schedule",
+      "label": "Schedules",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_pga_jobstep",
+      "label": "Steps",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_resource_group",
+      "label": "Resource Groups",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_role",
+      "label": "Login/Group Roles",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_tablespace",
+      "label": "Tablespaces",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_directory",
+      "label": "Directories",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_replica_nodes",
+      "label": "Replica Nodes",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_pgd_replication_groups",
+      "label": "PGD Replication Groups",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_node_pgd_replication_servers",
+      "label": "Servers",
+      "type": "node",
+      "default": true,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "editor",
+  "label": "Editor",
+  "categories": [
+   {
+    "name": "keyboard_shortcuts",
+    "label": "Keyboard shortcuts",
+    "preferences": [
+     {
+      "name": "find",
+      "label": "Find",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": true,
+       "ctrl_is_meta": true,
+       "key": {
+        "key_code": 70,
+        "char": "f"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "replace",
+      "label": "Replace",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": true,
+       "ctrl_is_meta": true,
+       "key": {
+        "key_code": 82,
+        "char": "r"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "goto_line_col",
+      "label": "Go to line/column",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": true,
+       "ctrl_is_meta": true,
+       "key": {
+        "key_code": 76,
+        "char": "l"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "comment",
+      "label": "Toggle comment",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": true,
+       "ctrl_is_meta": true,
+       "key": {
+        "key_code": 191,
+        "char": "/"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "format_sql",
+      "label": "Format SQL",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": true,
+       "ctrl_is_meta": true,
+       "key": {
+        "key_code": 75,
+        "char": "k"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "options",
+    "label": "Options",
+    "preferences": [
+     {
+      "name": "plain_editor_mode",
+      "label": "Plain text mode?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "When set to True, keywords won't be highlighted and code folding will be disabled. Plain text mode will improve editor performance with large files.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "code_folding",
+      "label": "Code folding?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "Enable or disable code folding. In plain text mode, this will have no effect as code folding is always disabled in that mode. Disabling will improve editor performance with large files.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "cursor_blink_rate",
+      "label": "Cursor blink rate",
+      "type": "options",
+      "default": "medium",
+      "help_str": "Adjust the speed at which the text cursor blinks within the editors.",
+      "control_props": {
+       "allowClear": false,
+       "creatable": false
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "None",
+        "value": "none"
+       },
+       {
+        "label": "Slow",
+        "value": "slow"
+       },
+       {
+        "label": "Medium",
+        "value": "medium"
+       },
+       {
+        "label": "Fast",
+        "value": "fast"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "wrap_code",
+      "label": "Line wrapping?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "Specifies whether or not to wrap SQL code in the editor.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "insert_pair_brackets",
+      "label": "Insert bracket pairs?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "Specifies whether or not to insert paired brackets in the editor.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "highlight_selection_matches",
+      "label": "Highlight selection matches?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "Specifies whether or not to highlight matched selected text in the editor.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "brace_matching",
+      "label": "Brace matching?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "Specifies whether or not to highlight matched braces in the editor.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "sql_font_size",
+      "label": "Font size",
+      "type": "numeric",
+      "default": "1",
+      "help_str": "The font size to use for the SQL text boxes and editors. The value specified is in \"em\" units, in which 1 is the default relative font size. For example, to increase the font size by 20 percent use a value of 1.2, or to reduce by 20 percent, use a value of 0.8. Minimum 0.1, maximum 10.",
+      "control_props": {},
+      "min_val": 0.1,
+      "max_val": 10,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "sql_font_ligatures",
+      "label": "Font ligatures?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "If set to true, ligatures will be enabled in SQL text boxes and editors provided the configured font family supports them.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "sql_font_family",
+      "label": "Font family",
+      "type": "text",
+      "default": "Source Code Pro",
+      "help_str": "Specify the font family to be used for all SQL editors. The specified font should already be installed on your system. If the font is not found, the editor will fall back to the default font, Source Code Pro.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "indent_new_line",
+      "label": "Auto-indent new line?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "Specifies whether the newly added line using enter key should be auto-indented or not",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "sql_formatting",
+    "label": "SQL formatting",
+    "preferences": [
+     {
+      "name": "keyword_case",
+      "label": "Keyword case",
+      "type": "radioModern",
+      "default": "upper",
+      "help_str": "Convert keywords to upper, lower, or preserve casing.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "Upper case",
+        "value": "upper"
+       },
+       {
+        "label": "Lower case",
+        "value": "lower"
+       },
+       {
+        "label": "Preserve",
+        "value": "preserve"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "identifier_case",
+      "label": "Identifier case",
+      "type": "radioModern",
+      "default": "upper",
+      "help_str": "Convert identifiers to upper, lower, or preserve casing.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "Upper case",
+        "value": "upper"
+       },
+       {
+        "label": "Lower case",
+        "value": "lower"
+       },
+       {
+        "label": "Preserve",
+        "value": "preserve"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "function_case",
+      "label": "Function case",
+      "type": "radioModern",
+      "default": "upper",
+      "help_str": "Convert function names to upper, lower, or preserve casing.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "Upper case",
+        "value": "upper"
+       },
+       {
+        "label": "Lower case",
+        "value": "lower"
+       },
+       {
+        "label": "Preserve",
+        "value": "preserve"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "data_type_case",
+      "label": "Data type case",
+      "type": "radioModern",
+      "default": "upper",
+      "help_str": "Convert data types to upper, lower, or preserve casing.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "Upper case",
+        "value": "upper"
+       },
+       {
+        "label": "Lower case",
+        "value": "lower"
+       },
+       {
+        "label": "Preserve",
+        "value": "preserve"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "spaces_around_operators",
+      "label": "Spaces around operators?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If set to True, spaces are used around all operators.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "tab_size",
+      "label": "Tab size",
+      "type": "integer",
+      "default": 4,
+      "help_str": "The number of spaces per tab. Minimum 2, maximum 8.",
+      "control_props": {},
+      "min_val": 2,
+      "max_val": 8,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "use_spaces",
+      "label": "Use spaces?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "Specifies whether or not to insert spaces instead of tabs when the tab key or auto-indent are used.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "expression_width",
+      "label": "Expression Width",
+      "type": "integer",
+      "default": 50,
+      "help_str": "Maximum number of characters in parenthesized expressions to be kept on a single line.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "logical_operator_new_line",
+      "label": "Logical operator new line",
+      "type": "radioModern",
+      "default": "before",
+      "help_str": "Decides newline placement before or after logical operators (AND, OR, XOR).",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "Before",
+        "value": "before"
+       },
+       {
+        "label": "After",
+        "value": "after"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "lines_between_queries",
+      "label": "Lines between queries",
+      "type": "integer",
+      "default": 1,
+      "help_str": "Decides how many empty lines to leave between SQL statements. A value of zero means no empty lines are added.",
+      "control_props": {},
+      "min_val": 0,
+      "max_val": 5,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "new_line_before_semicolon",
+      "label": "New line before semicolon?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "Whether to place query separator (;) on a separate line.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "NODE-server_group",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-server",
+  "label": "Servers",
+  "categories": []
+ },
+ {
+  "name": "paths",
+  "label": "Paths",
+  "categories": [
+   {
+    "name": "bin_paths",
+    "label": "Binary paths",
+    "preferences": [
+     {
+      "name": "pg_bin_dir",
+      "label": "PostgreSQL Binary Path",
+      "type": "selectFile",
+      "default": "[{\"version\": \"130000\", \"next_major_version\": \"140000\", \"serverType\": \"PostgreSQL 13\", \"binaryPath\": null, \"isDefault\": false}, {\"version\": \"140000\", \"next_major_version\": \"150000\", \"serverType\": \"PostgreSQL 14\", \"binaryPath\": null, \"isDefault\": false}, {\"version\": \"150000\", \"next_major_version\": \"160000\", \"serverType\": \"PostgreSQL 15\", \"binaryPath\": null, \"isDefault\": false}, {\"version\": \"160000\", \"next_major_version\": \"170000\", \"serverType\": \"PostgreSQL 16\", \"binaryPath\": null, \"isDefault\": false}, {\"version\": \"170000\", \"next_major_version\": \"180000\", \"serverType\": \"PostgreSQL 17\", \"binaryPath\": null, \"isDefault\": false}, {\"version\": \"180000\", \"next_major_version\": \"190000\", \"serverType\": \"PostgreSQL 18\", \"binaryPath\": null, \"isDefault\": false}]",
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "ppas_bin_dir",
+      "label": "EDB Advanced Server Binary Path",
+      "type": "selectFile",
+      "default": "[{\"version\": \"130000\", \"next_major_version\": \"140000\", \"serverType\": \"EDB Advanced Server 13\", \"binaryPath\": null, \"isDefault\": false}, {\"version\": \"140000\", \"next_major_version\": \"150000\", \"serverType\": \"EDB Advanced Server 14\", \"binaryPath\": null, \"isDefault\": false}, {\"version\": \"150000\", \"next_major_version\": \"160000\", \"serverType\": \"EDB Advanced Server 15\", \"binaryPath\": null, \"isDefault\": false}, {\"version\": \"160000\", \"next_major_version\": \"170000\", \"serverType\": \"EDB Advanced Server 16\", \"binaryPath\": null, \"isDefault\": false}, {\"version\": \"170000\", \"next_major_version\": \"180000\", \"serverType\": \"EDB Advanced Server 17\", \"binaryPath\": null, \"isDefault\": false}, {\"version\": \"180000\", \"next_major_version\": \"190000\", \"serverType\": \"EDB Advanced Server 18\", \"binaryPath\": null, \"isDefault\": false}]",
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "help",
+    "label": "Help",
+    "preferences": [
+     {
+      "name": "pg_help_path",
+      "label": "PostgreSQL Help Path",
+      "type": "text",
+      "default": "https://www.postgresql.org/docs/$VERSION$/",
+      "help_str": "Path to the PostgreSQL documentation. $VERSION$ will be replaced with the major.minor version number.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "NODE-database",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-cast",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-event_trigger",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-extension",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-foreign_data_wrapper",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-foreign_server",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-user_mapping",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-language",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-publication",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-schema",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-aggregate",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-catalog_object",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-catalog_object_column",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-collation",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-domain",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-domain_constraints",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-foreign_table",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-trigger",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-constraints",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-check_constraint",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-exclusion_constraint",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-foreign_key",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-primary_key",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-unique_constraint",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-foreign_table_column",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-fts_configuration",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-fts_dictionary",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-fts_parser",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-fts_template",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-function",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-trigger_function",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-procedure",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-operator",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-package",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-edbfunc",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-edbproc",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-edbvar",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-sequence",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-synonym",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-table",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-column",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-compound_trigger",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-index",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-partition",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-row_security_policy",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-rule",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-type",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-view",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-mview",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-catalog",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-subscription",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-dbms_job_scheduler",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-dbms_job",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-dbms_program",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-dbms_schedule",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-pga_job",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-pga_schedule",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-pga_jobstep",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-resource_group",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-role",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-tablespace",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-directory",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-replica_nodes",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-pgd_replication_groups",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "NODE-pgd_replication_servers",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "dashboard",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "dashboards",
+  "label": "Dashboards",
+  "categories": [
+   {
+    "name": "dashboards",
+    "label": "Refresh rates",
+    "preferences": [
+     {
+      "name": "session_stats_refresh",
+      "label": "Session statistics refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "tps_stats_refresh",
+      "label": "Transaction throughput refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "ti_stats_refresh",
+      "label": "Tuples in refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "to_stats_refresh",
+      "label": "Tuples out refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "bio_stats_refresh",
+      "label": "Block I/O statistics refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "hpc_stats_refresh",
+      "label": "Handle & Process count statistics refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "cpu_stats_refresh",
+      "label": "CPU usage by process mode refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "la_stats_refresh",
+      "label": "Average load statistics refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "pcpu_stats_refresh",
+      "label": "CPU usage per process statistics refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "m_stats_refresh",
+      "label": "Memory usage statistics refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "sm_stats_refresh",
+      "label": "Swap memory usage statistics refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "pmu_stats_refresh",
+      "label": "Memory usage per process statistics refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "io_stats_refresh",
+      "label": "I/O analysis statistics refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "pgd_replication_lag_refresh",
+      "label": "PGD replication lag refresh rate",
+      "type": "integer",
+      "default": 5,
+      "help_str": "The number of seconds between graph samples.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 999999,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "display",
+    "label": "Display",
+    "preferences": [
+     {
+      "name": "show_graphs",
+      "label": "Show activity?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If set to True, activity will be displayed on dashboards.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_activity",
+      "label": "Show state?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If set to True, state tables will be displayed on dashboards.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "long_running_query_threshold",
+      "label": "Long running query thresholds",
+      "type": "threshold",
+      "default": "2|5",
+      "help_str": "Set the warning and alert threshold value to highlight the long-running queries on the dashboard.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "graphs",
+  "label": "Graphs",
+  "categories": [
+   {
+    "name": "graphs",
+    "label": "Display",
+    "preferences": [
+     {
+      "name": "graph_data_points",
+      "label": "Show graph data points?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "If set to True, data points will be visible on graph lines.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "use_diff_point_style",
+      "label": "Use different data point styles?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "If set to True, data points will be visible in a different style on each graph line.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "graph_mouse_track",
+      "label": "Show mouse hover tooltip?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If set to True, a tooltip will appear on mouse hover on the graph lines showing the data point details.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "graph_line_border_width",
+      "label": "Chart line width",
+      "type": "integer",
+      "default": 1,
+      "help_str": "Set the width of the lines on the line chart.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 10,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "help",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "llm",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "ai",
+  "label": "AI",
+  "categories": [
+   {
+    "name": "general",
+    "label": "AI Configuration",
+    "preferences": [
+     {
+      "name": "default_provider",
+      "label": "Default Provider",
+      "type": "options",
+      "default": "",
+      "help_str": "The LLM provider to use for AI features. Select \"None (Disabled)\" to disable AI features. Note: AI features must also be enabled in the server configuration (LLM_ENABLED) for this setting to take effect.",
+      "control_props": {
+       "allowClear": false
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "None (Disabled)",
+        "value": ""
+       },
+       {
+        "label": "Anthropic",
+        "value": "anthropic"
+       },
+       {
+        "label": "OpenAI",
+        "value": "openai"
+       },
+       {
+        "label": "Ollama",
+        "value": "ollama"
+       },
+       {
+        "label": "Docker Model Runner",
+        "value": "docker"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "max_tool_iterations",
+      "label": "Max Tool Iterations",
+      "type": "integer",
+      "default": 20,
+      "help_str": "Maximum number of tool call iterations allowed during an AI conversation. Higher values allow more complex queries but may consume more resources. Default is 20.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 100,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "anthropic",
+    "label": "Anthropic",
+    "preferences": [
+     {
+      "name": "anthropic_api_url",
+      "label": "API URL",
+      "type": "text",
+      "default": "",
+      "help_str": "URL for the Anthropic API endpoint. Leave empty to use the default (https://api.anthropic.com/v1). Set a custom URL to use an Anthropic-compatible API provider.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "anthropic_api_key_file",
+      "label": "API Key File",
+      "type": "text",
+      "default": "~/.anthropic-api-key",
+      "help_str": "Path to a file containing your Anthropic API key. This path must be on the server hosting pgAdmin, e.g. inside the container when using Docker. The file should contain only the API key. The API key may be optional when using a custom API URL with a provider that does not require authentication.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "anthropic_api_model",
+      "label": "Model",
+      "type": "options",
+      "default": "",
+      "help_str": "The Anthropic model to use. Models are loaded dynamically from your API key. You can also type a custom model name. Leave empty to use the default (Claude Sonnet 4).",
+      "control_props": {
+       "allowClear": true,
+       "creatable": true,
+       "tags": true,
+       "placeholder": "Select or type a model name...",
+       "optionsUrl": "llm.models_anthropic",
+       "optionsRefreshUrl": "llm.refresh_models_anthropic",
+       "refreshDepNames": {
+        "api_url": "anthropic_api_url",
+        "api_key_file": "anthropic_api_key_file"
+       }
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "openai",
+    "label": "OpenAI",
+    "preferences": [
+     {
+      "name": "openai_api_url",
+      "label": "API URL",
+      "type": "text",
+      "default": "",
+      "help_str": "URL for the OpenAI API endpoint. Leave empty to use the default (https://api.openai.com/v1). Set a custom URL to use any OpenAI-compatible API provider such as LiteLLM, LM Studio, or EXO. The URL should include the /v1 path prefix if required by your provider (e.g., http://localhost:1234/v1).",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "openai_api_key_file",
+      "label": "API Key File",
+      "type": "text",
+      "default": "~/.openai-api-key",
+      "help_str": "Path to a file containing your OpenAI API key. This path must be on the server hosting pgAdmin, e.g. inside the container when using Docker. The file should contain only the API key. The API key may be optional when using a custom API URL with a provider that does not require authentication.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "openai_api_model",
+      "label": "Model",
+      "type": "options",
+      "default": "",
+      "help_str": "The OpenAI model to use. Models are loaded dynamically from your API key. You can also type a custom model name. Leave empty to use the default (GPT-4o).",
+      "control_props": {
+       "allowClear": true,
+       "creatable": true,
+       "tags": true,
+       "placeholder": "Select or type a model name...",
+       "optionsUrl": "llm.models_openai",
+       "optionsRefreshUrl": "llm.refresh_models_openai",
+       "refreshDepNames": {
+        "api_url": "openai_api_url",
+        "api_key_file": "openai_api_key_file"
+       }
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "ollama",
+    "label": "Ollama",
+    "preferences": [
+     {
+      "name": "ollama_api_url",
+      "label": "API URL",
+      "type": "text",
+      "default": "",
+      "help_str": "URL for the Ollama API endpoint (e.g., http://localhost:11434).",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "ollama_api_model",
+      "label": "Model",
+      "type": "options",
+      "default": "",
+      "help_str": "The Ollama model to use. Models are loaded dynamically from your Ollama server. You can also type a custom model name. Leave empty to use the default (llama3.2).",
+      "control_props": {
+       "allowClear": true,
+       "creatable": true,
+       "tags": true,
+       "placeholder": "Select or type a model name...",
+       "optionsUrl": "llm.models_ollama",
+       "optionsRefreshUrl": "llm.refresh_models_ollama",
+       "refreshDepNames": {
+        "api_url": "ollama_api_url"
+       }
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "docker",
+    "label": "Docker Model Runner",
+    "preferences": [
+     {
+      "name": "docker_api_url",
+      "label": "API URL",
+      "type": "text",
+      "default": "",
+      "help_str": "URL for the Docker Model Runner API endpoint (e.g., http://localhost:12434). Available in Docker Desktop 4.40 and later. Tip: You can also use the OpenAI provider with a custom API URL for any OpenAI-compatible endpoint, including Docker Model Runner.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "docker_api_model",
+      "label": "Model",
+      "type": "options",
+      "default": "",
+      "help_str": "The Docker model to use. Models are loaded dynamically from your Docker Model Runner. You can also type a custom model name. Leave empty to use the default (ai/qwen3-coder).",
+      "control_props": {
+       "allowClear": true,
+       "creatable": true,
+       "tags": true,
+       "placeholder": "Select or type a model name...",
+       "optionsUrl": "llm.models_docker",
+       "optionsRefreshUrl": "llm.refresh_models_docker",
+       "refreshDepNames": {
+        "api_url": "docker_api_url"
+       }
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "misc",
+  "label": "Miscellaneous",
+  "categories": [
+   {
+    "name": "user_interface",
+    "label": "User Interface",
+    "preferences": [
+     {
+      "name": "user_language",
+      "label": "Language",
+      "type": "options",
+      "default": "en",
+      "help_str": null,
+      "control_props": {
+       "allowClear": false
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "English",
+        "value": "en"
+       },
+       {
+        "label": "Chinese (Simplified)",
+        "value": "zh_Hans_CN"
+       },
+       {
+        "label": "Chinese (Traditional)",
+        "value": "zh_Hant_TW"
+       },
+       {
+        "label": "Czech",
+        "value": "cs"
+       },
+       {
+        "label": "French",
+        "value": "fr"
+       },
+       {
+        "label": "German",
+        "value": "de"
+       },
+       {
+        "label": "Indonesian",
+        "value": "id"
+       },
+       {
+        "label": "Italian",
+        "value": "it"
+       },
+       {
+        "label": "Japanese",
+        "value": "ja"
+       },
+       {
+        "label": "Korean",
+        "value": "ko"
+       },
+       {
+        "label": "Polish",
+        "value": "pl"
+       },
+       {
+        "label": "Portuguese (Brazilian)",
+        "value": "pt_BR"
+       },
+       {
+        "label": "Russian",
+        "value": "ru"
+       },
+       {
+        "label": "Spanish",
+        "value": "es"
+       },
+       {
+        "label": "Swedish",
+        "value": "sv"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "theme",
+      "label": "Theme",
+      "type": "options",
+      "default": "system",
+      "help_str": "Click the save button to apply the theme. Below is the preview of the theme.",
+      "control_props": {
+       "allowClear": false,
+       "creatable": false
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "Light",
+        "value": "light",
+        "preview_src": "js/generated/img/light_preview.png"
+       },
+       {
+        "label": "Dark",
+        "value": "dark",
+        "preview_src": "js/generated/img/dark_preview.png"
+       },
+       {
+        "label": "High Contrast",
+        "value": "high_contrast",
+        "preview_src": "js/generated/img/high_contrast_preview.png"
+       },
+       {
+        "label": "System",
+        "value": "system",
+        "preview_src": null
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "layout",
+      "label": "Layout",
+      "type": "options",
+      "default": "workspace",
+      "help_str": "Choose the layout that suits you best. pgAdmin offers two options: the Classic layout, a longstanding and familiar design, and the Workspace layout, which provides distraction free dedicated areas for the Query Tool, PSQL, and Schema Diff tools.",
+      "control_props": {
+       "allowClear": false,
+       "creatable": false
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "Classic",
+        "value": "classic"
+       },
+       {
+        "label": "Workspace",
+        "value": "workspace"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "open_in_res_workspace",
+      "label": "Open the Query Tool/PSQL in their respective workspaces",
+      "type": "boolean",
+      "default": false,
+      "help_str": "This setting applies only when the layout is set to Workspace Layout. When set to True, all Query Tool/PSQL tabs will open in their respective workspaces. By default, this setting is False, meaning that Query Tool/PSQL tabs will open in the currently active workspace (either the default or the workspace selected at the time of opening)",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "save_app_state",
+      "label": "Save the application state?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If set to True, pgAdmin will save the state of opened tools (such as Query Tool, PSQL, Schema Diff, and ERD), including any unsaved data. This data will be automatically restored in the event of an unexpected shutdown or browser refresh.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "file_downloads",
+    "label": "File Downloads",
+    "preferences": [
+     {
+      "name": "enable_binary_data_download",
+      "label": "Enable binary data download?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "If set to True, binary data can be downloaded from the result grid. The default is False to prevent excessive memory usage on the server.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "bgprocess",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "cloud",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "azure",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "rds",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "google",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "dependencies",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "dependents",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "file_manager",
+  "label": "Storage",
+  "categories": [
+   {
+    "name": "options",
+    "label": "Options",
+    "preferences": [
+     {
+      "name": "file_upload_size",
+      "label": "Maximum file upload size (MB)",
+      "type": "integer",
+      "default": 50,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "last_directory_visited",
+      "label": "Last directory visited",
+      "type": "text",
+      "default": "/",
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "last_storage",
+      "label": "Last storage",
+      "type": "text",
+      "default": "",
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": true,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "file_dialog_view",
+      "label": "File dialog view",
+      "type": "select",
+      "default": "list",
+      "help_str": null,
+      "control_props": {
+       "allowClear": false,
+       "tags": false
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "List",
+        "value": "list"
+       },
+       {
+        "label": "Grid",
+        "value": "grid"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_hidden_files",
+      "label": "Show hidden files and folders?",
+      "type": "boolean",
+      "default": false,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "statistics",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "workspace",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "preferences",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "redirects",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "settings",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "tools",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "backup",
+  "label": "Backup",
+  "categories": []
+ },
+ {
+  "name": "debugger",
+  "label": "Debugger",
+  "categories": [
+   {
+    "name": "keyboard_shortcuts",
+    "label": "Keyboard shortcuts",
+    "preferences": [
+     {
+      "name": "btn_start",
+      "label": "Continue/Start",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 67,
+        "char": "c"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_stop",
+      "label": "Stop",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 83,
+        "char": "s"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_step_into",
+      "label": "Step into",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 73,
+        "char": "i"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_step_over",
+      "label": "Step over",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 79,
+        "char": "o"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_toggle_breakpoint",
+      "label": "Toggle breakpoint",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 84,
+        "char": "t"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_clear_breakpoints",
+      "label": "Clear all breakpoints",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 88,
+        "char": "x"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "edit_grid_values",
+      "label": "Edit grid values",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 81,
+        "char": "q"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "move_previous",
+      "label": "Previous tab",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 219,
+        "char": "["
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "move_next",
+      "label": "Next tab",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 221,
+        "char": "]"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "switch_panel",
+      "label": "Switch panel",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 9,
+        "char": "Tab"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "erd",
+  "label": "ERD tool",
+  "categories": [
+   {
+    "name": "keyboard_shortcuts",
+    "label": "Keyboard shortcuts",
+    "preferences": [
+     {
+      "name": "open_project",
+      "label": "Open project",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": true,
+       "ctrl_is_meta": true,
+       "key": {
+        "key_code": 79,
+        "char": "o"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "save_project",
+      "label": "Save project",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": true,
+       "ctrl_is_meta": true,
+       "key": {
+        "key_code": 83,
+        "char": "s"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "save_project_as",
+      "label": "Save project as",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": true,
+       "control": true,
+       "key": {
+        "key_code": 83,
+        "char": "s"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "generate_sql",
+      "label": "Generate SQL",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 83,
+        "char": "s"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "download_image",
+      "label": "Download image",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 73,
+        "char": "i"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "search_table",
+      "label": "Search table",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 70,
+        "char": "f"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "add_table",
+      "label": "Add table",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 65,
+        "char": "a"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "edit_table",
+      "label": "Edit table",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 69,
+        "char": "e"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "clone_table",
+      "label": "Clone table",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 67,
+        "char": "c"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "drop_table",
+      "label": "Drop table",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 68,
+        "char": "d"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "add_edit_note",
+      "label": "Add/Edit note",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 78,
+        "char": "n"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "one_to_one",
+      "label": "One to one link",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 66,
+        "char": "b"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "one_to_many",
+      "label": "One to many link",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 79,
+        "char": "o"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "many_to_many",
+      "label": "Many to many link",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 77,
+        "char": "m"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "auto_align",
+      "label": "Auto align",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 76,
+        "char": "l"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "show_details",
+      "label": "Show more/fewer details",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 84,
+        "char": "t"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "zoom_to_fit",
+      "label": "Zoom to fit",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 70,
+        "char": "f"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "zoom_in",
+      "label": "Zoom in",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 187,
+        "char": "+"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "zoom_out",
+      "label": "Zoom out",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 189,
+        "char": "-"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "options",
+    "label": "Options",
+    "preferences": [
+     {
+      "name": "sql_with_drop",
+      "label": "SQL With DROP Table",
+      "type": "boolean",
+      "default": false,
+      "help_str": "If enabled, the SQL generated by the ERD Tool will add DROP table DDL before each CREATE table DDL.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "table_relation_depth",
+      "label": "Table Relation Depth",
+      "type": "integer",
+      "default": -1,
+      "help_str": "The maximum depth pgAdmin should traverse to find related tables when generating an ERD for a table. Use -1 for no limit.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "insert_table_with_relations",
+      "label": "Insert Table With Relations",
+      "type": "boolean",
+      "default": false,
+      "help_str": "Whether inserting a table via drag and drop should also insert its relations to the existing tables in the diagram.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "cardinality_notation",
+      "label": "Cardinality Notation",
+      "type": "radioModern",
+      "default": "crows",
+      "help_str": "Notation to be used to present cardinality.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "Crow's foot",
+        "value": "crows"
+       },
+       {
+        "label": "Chen",
+        "value": "chen"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "image_pixel_ratio",
+      "label": "Image Download Resolution",
+      "type": "radioModern",
+      "default": "1",
+      "help_str": "Higher values will use higher memory and slower rendering.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "Good",
+        "value": "1"
+       },
+       {
+        "label": "High",
+        "value": "3"
+       },
+       {
+        "label": "Very High",
+        "value": "5"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "format_pgerd",
+      "label": "Format ERD Project File?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "If enabled, the .pgerd project file of the ERD tool will be formatted before saving.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "grant_wizard",
+  "label": null,
+  "categories": []
+ },
+ {
+  "name": "import_export",
+  "label": "Import/Export",
+  "categories": []
+ },
+ {
+  "name": "import_export_servers",
+  "label": "Import/Export Servers",
+  "categories": []
+ },
+ {
+  "name": "maintenance",
+  "label": "Maintenance",
+  "categories": []
+ },
+ {
+  "name": "psql",
+  "label": "PSQL",
+  "categories": []
+ },
+ {
+  "name": "restore",
+  "label": "Restore",
+  "categories": []
+ },
+ {
+  "name": "schema_diff",
+  "label": "Schema Diff",
+  "categories": [
+   {
+    "name": "display",
+    "label": "Display",
+    "preferences": [
+     {
+      "name": "ignore_whitespaces",
+      "label": "Ignore Whitespace",
+      "type": "boolean",
+      "default": false,
+      "help_str": "Set ignore whitespace on or off by default in the drop-down menu near the Compare button in the Schema Diff tab.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "ignore_owner",
+      "label": "Ignore Owner",
+      "type": "boolean",
+      "default": false,
+      "help_str": "Set ignore owner on or off by default in the drop-down menu near the Compare button in the Schema Diff tab.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "ignore_tablespace",
+      "label": "Ignore Tablespace",
+      "type": "boolean",
+      "default": false,
+      "help_str": "Set ignore tablespace on or off by default in the drop-down menu near the Compare button in the Schema Diff tab.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "ignore_grants",
+      "label": "Ignore Grants/Revoke",
+      "type": "boolean",
+      "default": false,
+      "help_str": "Set ignore grants/revoke on or off by default in the drop-down menu near the Compare button in the Schema Diff tab.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "search_objects",
+  "label": "Search objects",
+  "categories": []
+ },
+ {
+  "name": "sqleditor",
+  "label": "Query Tool",
+  "categories": [
+   {
+    "name": "Explain",
+    "label": "Explain",
+    "preferences": [
+     {
+      "name": "explain_verbose",
+      "label": "Verbose output?",
+      "type": "boolean",
+      "default": false,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "explain_costs",
+      "label": "Show costs?",
+      "type": "boolean",
+      "default": false,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "explain_buffers",
+      "label": "Show buffers?",
+      "type": "boolean",
+      "default": false,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "explain_timing",
+      "label": "Show timing?",
+      "type": "boolean",
+      "default": false,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "explain_summary",
+      "label": "Show summary?",
+      "type": "boolean",
+      "default": false,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "explain_settings",
+      "label": "Show settings?",
+      "type": "boolean",
+      "default": false,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "explain_wal",
+      "label": "Show WAL?",
+      "type": "boolean",
+      "default": false,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "explain_generic_plan",
+      "label": "Show generic plan?",
+      "type": "boolean",
+      "default": false,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "explain_memory",
+      "label": "Show memory?",
+      "type": "boolean",
+      "default": false,
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "Options",
+    "label": "Options",
+    "preferences": [
+     {
+      "name": "auto_commit",
+      "label": "Auto commit?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "Set auto commit on or off by default in new Query Tool tabs.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "auto_rollback",
+      "label": "Auto rollback on error?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "Set auto rollback on or off by default in new Query Tool tabs.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "server_cursor",
+      "label": "Use server cursor?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "If set to True, the dataset will be fetched using a server-side cursor after the query is executed. This allows controlled data transfer to the client, enabling examination of large datasets without loading them entirely into memory.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "prompt_save_query_changes",
+      "label": "Prompt to save unsaved query changes?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "Specifies whether or not to prompt the user to save unsaved queries on Query Tool exit.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "table_view_data_by_pk",
+      "label": "Sort View Data results by primary key columns?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If set to True, data returned when using the View/Edit Data - All Rows option will be sorted by the Primary Key columns by default. When using the First/Last 100 Rows options, data is always sorted.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "view_data_default_row_limit",
+      "label": "Default row limit for View Data",
+      "type": "integer",
+      "default": 0,
+      "help_str": "Specify the maximum number of rows to fetch when using the View/Edit Data - All Rows option. This appends a LIMIT clause to the generated query, which can significantly improve performance on very large tables. Set to 0 (the default) to fetch all rows with no limit (the existing behavior). This does not affect the First/Last 100 Rows options.",
+      "control_props": {},
+      "min_val": 0,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "prompt_save_data_changes",
+      "label": "Prompt to save unsaved data changes?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "Specifies whether or not to prompt the user to save unsaved data on data grid exit.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "prompt_commit_transaction",
+      "label": "Prompt to commit/rollback active transactions?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "Specifies whether or not to prompt the user to commit or rollback an active transaction on Query Tool exit.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "copy_sql_to_query_tool",
+      "label": "Copy SQL from main window to query tool?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "Specifies whether or not to copy SQL to the Query Tool from the main window.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "open_in_new_tab",
+      "label": "Open the file in a new tab?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "Specifies whether or not to open the file in a new tab.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "view_edit_promotion_warning",
+      "label": "Show View/Edit Data Promotion Warning?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If set to True, the View/Edit Data tool will show a confirmation dialog to promote to Query Tool when the query is edited.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "underline_query_cursor",
+      "label": "Underline query at cursor?",
+      "type": "boolean",
+      "default": false,
+      "help_str": "If set to True, the Query Tool will parse and underline the query at the cursor position.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "underlined_query_execute_warning",
+      "label": "Underlined query execute warning?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If set to True, the Query Tool will display a warning when clicking the Execute Query button. The warning will appear only if \"Underline query at cursor?\" is set to False.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "CSV_output",
+    "label": "CSV/TXT Output",
+    "preferences": [
+     {
+      "name": "csv_quoting",
+      "label": "CSV quoting",
+      "type": "options",
+      "default": "strings",
+      "help_str": null,
+      "control_props": {
+       "allowClear": false,
+       "tags": false
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "None",
+        "value": "none"
+       },
+       {
+        "label": "All",
+        "value": "all"
+       },
+       {
+        "label": "Strings",
+        "value": "strings"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "csv_quote_char",
+      "label": "CSV quote character",
+      "type": "options",
+      "default": "\"",
+      "help_str": null,
+      "control_props": {
+       "allowClear": false,
+       "tags": false,
+       "creatable": true,
+       "maxLength": 1
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "\"",
+        "value": "\""
+       },
+       {
+        "label": "'",
+        "value": "'"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "csv_field_separator",
+      "label": "CSV field separator",
+      "type": "options",
+      "default": ",",
+      "help_str": null,
+      "control_props": {
+       "allowClear": false,
+       "tags": false,
+       "creatable": true,
+       "maxLength": 1
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": ";",
+        "value": ";"
+       },
+       {
+        "label": ",",
+        "value": ","
+       },
+       {
+        "label": "|",
+        "value": "|"
+       },
+       {
+        "label": "Tab",
+        "value": "\t"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "csv_replace_nulls_with",
+      "label": "Replace null values with",
+      "type": "text",
+      "default": "NULL",
+      "help_str": "Specifies the string that represents a null value while downloading query results as CSV. You can specify any arbitrary string to represent a null value, with quotes if desired.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": true,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "Results_grid",
+    "label": "Results grid",
+    "preferences": [
+     {
+      "name": "results_grid_quoting",
+      "label": "Result copy quoting",
+      "type": "options",
+      "default": "strings",
+      "help_str": null,
+      "control_props": {
+       "allowClear": false,
+       "tags": false
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "None",
+        "value": "none"
+       },
+       {
+        "label": "All",
+        "value": "all"
+       },
+       {
+        "label": "Strings",
+        "value": "strings"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "results_grid_quote_char",
+      "label": "Result copy quote character. Not applied when copying a single cell.",
+      "type": "options",
+      "default": "\"",
+      "help_str": null,
+      "control_props": {
+       "allowClear": false,
+       "tags": false
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "\"",
+        "value": "\""
+       },
+       {
+        "label": "'",
+        "value": "'"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "results_grid_field_separator",
+      "label": "Result copy field separator",
+      "type": "options",
+      "default": "\t",
+      "help_str": null,
+      "control_props": {
+       "allowClear": false,
+       "tags": false
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": ";",
+        "value": ";"
+       },
+       {
+        "label": ",",
+        "value": ","
+       },
+       {
+        "label": "|",
+        "value": "|"
+       },
+       {
+        "label": "Tab",
+        "value": "\t"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "column_data_auto_resize",
+      "label": "Columns sized by",
+      "type": "radioModern",
+      "default": "by_data",
+      "help_str": "If set to 'Column data', columns will auto-size to the maximum width of the data in the column as loaded in the first batch. If set to 'Column name', the column will be sized to the widest of the data type or column name.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "Column data",
+        "value": "by_data"
+       },
+       {
+        "label": "Column name",
+        "value": "by_name"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": [
+       "column_data_max_width"
+      ]
+     },
+     {
+      "name": "column_data_max_width",
+      "label": "Maximum column width",
+      "type": "integer",
+      "default": 0,
+      "help_str": "Specify the maximum width of the column in pixels when 'Columns sized by' is set to 'Column data'.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "data_result_rows_per_page",
+      "label": "Data result rows per page",
+      "type": "integer",
+      "default": 1000,
+      "help_str": "Specify the number of records to fetch in one batch. Changing this value will override the DATA_RESULT_ROWS_PER_PAGE setting from the config file.",
+      "control_props": {},
+      "min_val": 10,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "striped_rows",
+      "label": "Striped rows?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If set to True, the result grid will display rows with alternating background colors.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "max_column_data_display_length",
+      "label": "Max column data display length",
+      "type": "integer",
+      "default": 200,
+      "help_str": "Maximum number of characters to display in a data cell.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "display",
+    "label": "Display",
+    "preferences": [
+     {
+      "name": "connection_status",
+      "label": "Connection status",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If set to True, the Query Tool will monitor and display the connection and transaction status.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "connection_status_fetch_time",
+      "label": "Connection status refresh rate",
+      "type": "integer",
+      "default": 2,
+      "help_str": "The number of seconds between connection/transaction status polls.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": 600,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "query_success_notification",
+      "label": "Show query success notification?",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If set to True, the Query Tool will show notifications on successful query execution.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "keyboard_shortcuts",
+    "label": "Keyboard shortcuts",
+    "preferences": [
+     {
+      "name": "execute_script",
+      "label": "Execute script",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": false,
+       "key": {
+        "key_code": 116,
+        "char": "F5"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "execute_cursor",
+      "label": "Execute query",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": false,
+       "ctrl_is_meta": false,
+       "key": {
+        "key_code": 116,
+        "char": "F5"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "save_data",
+      "label": "Save data changes",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": false,
+       "key": {
+        "key_code": 117,
+        "char": "F6"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "explain_query",
+      "label": "EXPLAIN query",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": false,
+       "key": {
+        "key_code": 118,
+        "char": "F7"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "explain_analyze_query",
+      "label": "EXPLAIN ANALYZE query",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 118,
+        "char": "F7"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "clear_query",
+      "label": "Clear query",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": false,
+       "control": true,
+       "key": {
+        "key_code": 76,
+        "char": "l"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "download_results",
+      "label": "Download results",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": false,
+       "key": {
+        "key_code": 119,
+        "char": "F8"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "move_previous",
+      "label": "Previous tab",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 219,
+        "char": "["
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "move_next",
+      "label": "Next tab",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 221,
+        "char": "]"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "switch_panel",
+      "label": "Switch panel",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "key": {
+        "key_code": 9,
+        "char": "Tab"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_open_file",
+      "label": "Open file",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": true,
+       "ctrl_is_meta": true,
+       "key": {
+        "key_code": 79,
+        "char": "o"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_save_file",
+      "label": "Save file",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": true,
+       "ctrl_is_meta": true,
+       "key": {
+        "key_code": 83,
+        "char": "s"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_add_row",
+      "label": "Add row",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "ctrl_is_meta": false,
+       "key": {
+        "key_code": 65,
+        "char": "a"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_paste_row",
+      "label": "Paste rows",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "ctrl_is_meta": false,
+       "key": {
+        "key_code": 80,
+        "char": "p"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_delete_row",
+      "label": "Delete rows",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "ctrl_is_meta": false,
+       "key": {
+        "key_code": 68,
+        "char": "d"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_filter_dialog",
+      "label": "Filter dialog",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "ctrl_is_meta": false,
+       "key": {
+        "key_code": 70,
+        "char": "f"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_filter_options",
+      "label": "Filter options",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "ctrl_is_meta": false,
+       "key": {
+        "key_code": 73,
+        "char": "i"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_execute_options",
+      "label": "Execute options",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "ctrl_is_meta": false,
+       "key": {
+        "key_code": 88,
+        "char": "x"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_cancel_query",
+      "label": "Cancel query",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "ctrl_is_meta": false,
+       "key": {
+        "key_code": 67,
+        "char": "c"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "btn_edit_options",
+      "label": "Edit options",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": true,
+       "shift": true,
+       "control": false,
+       "ctrl_is_meta": false,
+       "key": {
+        "key_code": 78,
+        "char": "n"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "toggle_case",
+      "label": "Toggle case of selected text",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": true,
+       "control": true,
+       "key": {
+        "key_code": 85,
+        "char": "u"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "commit_transaction",
+      "label": "Commit",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": true,
+       "control": true,
+       "key": {
+        "key_code": 77,
+        "char": "m"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "rollback_transaction",
+      "label": "Rollback",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": true,
+       "control": true,
+       "key": {
+        "key_code": 82,
+        "char": "r"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "auto_complete",
+      "label": "Auto complete",
+      "type": "keyboardshortcut",
+      "default": {
+       "alt": false,
+       "shift": false,
+       "control": true,
+       "ctrl_is_meta": false,
+       "key": {
+        "key_code": 32,
+        "char": "Space"
+       }
+      },
+      "help_str": null,
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": [
+       {
+        "name": "key",
+        "type": "keyCode",
+        "label": "Key"
+       },
+       {
+        "name": "shift",
+        "type": "checkbox",
+        "label": "Shift"
+       },
+       {
+        "name": "control",
+        "type": "checkbox",
+        "label": "Ctrl"
+       },
+       {
+        "name": "alt",
+        "type": "checkbox",
+        "label": "Alt/Option"
+       }
+      ],
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "auto_completion",
+    "label": "Auto completion",
+    "preferences": [
+     {
+      "name": "keywords_in_uppercase",
+      "label": "Keywords in uppercase",
+      "type": "boolean",
+      "default": true,
+      "help_str": "If set to True, keywords will be displayed in upper case for autocomplete.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "autocomplete_on_key_press",
+      "label": "Autocomplete on key press",
+      "type": "boolean",
+      "default": false,
+      "help_str": "If set to True, autocomplete will be available on key press along with CTRL/CMD + Space. If set to False, autocomplete is only activated when CTRL/CMD + Space is pressed.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "graph_visualiser",
+    "label": "Graph Visualiser",
+    "preferences": [
+     {
+      "name": "row_limit",
+      "label": "Row Limit",
+      "type": "integer",
+      "default": 10000,
+      "help_str": "This setting specifies the maximum number of rows that will be plotted on a chart. Increasing this limit may impact performance if charts are plotted with very high numbers of rows.",
+      "control_props": {},
+      "min_val": 1,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   },
+   {
+    "name": "geometry_viewer",
+    "label": "Geometry Viewer",
+    "preferences": [
+     {
+      "name": "custom_tile_url",
+      "label": "Custom tile provider URL",
+      "type": "text",
+      "default": "",
+      "help_str": "URL template of a custom XYZ tile provider used as a base layer in the Geometry Viewer, e.g. https://myserver.example.com/tiles/{z}/{x}/{y}.png. The template must contain the {x}, {y} and {z} placeholders, and may contain {s} for subdomains (a, b, c). Leave empty to disable the custom tile provider. Defaults to the administrator-configured DEFAULT_GEOMETRY_VIEWER_PROVIDER, if any.",
+      "control_props": {
+       "placeholder": "https://{s}.tile.example.com/{z}/{x}/{y}.png",
+       "maxLength": 1024
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": true,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "custom_tile_name",
+      "label": "Custom tile provider name",
+      "type": "text",
+      "default": "Custom",
+      "help_str": "Display name of the custom tile provider in the layer selector of the Geometry Viewer.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": true,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "custom_tile_crs",
+      "label": "Custom tile provider CRS",
+      "type": "options",
+      "default": "EPSG:3857",
+      "help_str": "Coordinate reference system of the custom tile provider. If it is not EPSG:3857 (Web Mercator), the built-in tile layers will be hidden as they cannot be mixed with other coordinate systems.",
+      "control_props": {
+       "allowClear": false,
+       "tags": false
+      },
+      "min_val": null,
+      "max_val": null,
+      "options": [
+       {
+        "label": "EPSG:3857 (Web Mercator)",
+        "value": "EPSG:3857"
+       },
+       {
+        "label": "EPSG:4326",
+        "value": "EPSG:4326"
+       },
+       {
+        "label": "EPSG:3395",
+        "value": "EPSG:3395"
+       }
+      ],
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "custom_tile_attribution",
+      "label": "Custom tile provider attribution",
+      "type": "text",
+      "default": "",
+      "help_str": "Attribution text shown on the map for the custom tile provider. May contain HTML links.",
+      "control_props": {},
+      "min_val": null,
+      "max_val": null,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": true,
+      "disabled": false,
+      "dependents": null
+     },
+     {
+      "name": "custom_tile_max_zoom",
+      "label": "Custom tile provider max zoom",
+      "type": "integer",
+      "default": 18,
+      "help_str": "Maximum zoom level of the custom tile provider.",
+      "control_props": {},
+      "min_val": 0,
+      "max_val": 25,
+      "options": null,
+      "select": null,
+      "fields": null,
+      "hidden": null,
+      "allow_blanks": null,
+      "disabled": false,
+      "dependents": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "user_management",
+  "label": "Users",
+  "categories": []
+ }
+]

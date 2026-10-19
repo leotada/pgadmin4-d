@@ -1,0 +1,4 @@
+CREATE ROLE app_user LOGIN PASSWORD 'x';
+CREATE ROLE app_group NOLOGIN;
+GRANT app_group TO app_user;
+CREATE TABLESPACE IF NOT EXISTS ts_test LOCATION '/tmp' ;
