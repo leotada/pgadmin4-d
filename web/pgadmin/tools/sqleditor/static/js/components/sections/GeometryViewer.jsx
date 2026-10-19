@@ -1,0 +1,475 @@
+/////////////////////////////////////////////////////////////
+//
+// pgAdmin 4 - PostgreSQL Tools
+//
+// Copyright (C) 2013 - 2026, The pgAdmin Development Team
+// This software is released under the PostgreSQL Licence
+//
+//////////////////////////////////////////////////////////////
+import React, { useEffect, useRef, useMemo }  from 'react';
+import { styled } from '@mui/material/styles';
+import ReactDOMServer from 'react-dom/server';
+import _ from 'lodash';
+import { MapContainer, TileLayer, LayersControl, GeoJSON, useMap } from 'react-leaflet';
+import Leaflet from 'leaflet';
+import {Geometry as WkxGeometry} from 'wkx';
+import {Buffer} from 'buffer';
+import gettext from 'sources/gettext';
+import Theme from 'sources/Theme';
+import PropTypes from 'prop-types';
+import { Box } from '@mui/material';
+import EmptyPanelMessage from '../../../../../../static/js/components/EmptyPanelMessage';
+import { PANELS } from '../QueryToolConstants';
+import { QueryToolContext } from '../QueryToolComponent';
+import usePreferences from '../../../../../../preferences/static/js/store';
+import { getCustomTileProvider, getMapCrs, getBaseLayers } from './GeometryViewerUtils';
+
+const StyledBox = styled(Box)(({theme}) => ({
+  position: 'relative',
+  '& .GeometryViewer-mapContainer': {
+    backgroundColor: theme.palette.background.default,
+    height: '100%',
+    width: '100%',
+    '& .leaflet-popup-content': {
+      overflow: 'auto',
+      margin: '8px',
+      '& .GeometryViewer-table': {
+        borderSpacing: 0,
+        width: '100%',
+        ...theme.mixins.panelBorder,
+        '& .GeometryViewer-tableCellHead': {
+          fontWeight: 'bold',
+        },
+        '& .GeometryViewer-tableCell': {
+          margin: 0,
+          padding: theme.spacing(0.5),
+          ...theme.mixins.panelBorder.bottom,
+          ...theme.mixins.panelBorder.right,
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+        },
+      },
+    }
+  },
+}));
+
+function parseEwkbData(rows, column) {
+  let key = column.key;
+  const maxRenderByteLength = 20 * 1024 * 1024; //render geometry data up to 20MB
+  const maxRenderGeometries = 100000; // render geometries up to 100000
+
+  let geometries3D = [],
+    supportedGeometries = [],
+    unsupportedRows = [],
+    geometryItemMap = new Map(),
+    geometryTotalByteLength = 0,
+    tooLargeDataSize = false,
+    tooManyGeometries = false,
+    infoList = [];
+
+  _.every(rows, function (item) {
+    try {
+      let value = item[key];
+      let buffer = Buffer.from(value, 'hex');
+      let geometry = WkxGeometry.parse(buffer);
+      if (((isNaN(geometry.x) || isNaN(geometry.y)) && !(_.isNil(geometry.x) && _.isNil(geometry.y)))){
+        unsupportedRows.push(item);
+        return true;
+      }
+      if (geometry.hasZ) {
+        geometries3D.push(geometry);
+        return true;
+      }
+      geometryTotalByteLength += buffer.byteLength;
+      if (geometryTotalByteLength > maxRenderByteLength) {
+        tooLargeDataSize = true;
+        return false;
+      }
+      if (supportedGeometries.length >= maxRenderGeometries) {
+        tooManyGeometries = true;
+        return false;
+      }
+
+      if (!geometry.srid) {
+        geometry.srid = 0;
+      }
+      supportedGeometries.push(geometry);
+      geometryItemMap.set(geometry, item);
+    } catch {
+      unsupportedRows.push(item);
+    }
+    return true;
+  });
+
+  // generate map info content
+  if (tooLargeDataSize || tooManyGeometries) {
+    infoList.push(gettext('%s of %s geometries rendered.', supportedGeometries.length, rows.length));
+  }
+  if (geometries3D.length > 0) {
+    infoList.push(gettext('3D geometries not rendered.'));
+  }
+  if (unsupportedRows.length > 0) {
+    infoList.push(gettext('Unsupported geometries not rendered.'));
+  }
+
+  return [
+    supportedGeometries,
+    geometryItemMap,
+    infoList
+  ];
+}
+
+function parseData(rows, columns, column) {
+  if (rows.length === 0) {
+    return {
+      'geoJSONs': [],
+      'selectedSRID': 0,
+      'getPopupContent': undefined,
+      'infoList': [gettext('Empty row.')],
+    };
+  }
+
+  let mixedSRID = false;
+  // parse ewkb data
+  let [
+    supportedGeometries,
+    geometryItemMap,
+    infoList
+  ] = parseEwkbData(rows, column);
+
+  if (supportedGeometries.length === 0) {
+    return {
+      'geoJSONs': [],
+      'selectedSRID': 0,
+      'getPopupContent': undefined,
+      'infoList': infoList,
+    };
+  }
+
+  // group geometries by SRID
+  let geometriesGroupBySRID = _.groupBy(supportedGeometries, 'srid');
+  let SRIDGeometriesPairs = _.toPairs(geometriesGroupBySRID);
+  if (SRIDGeometriesPairs.length > 1) {
+    mixedSRID = true;
+  }
+  // select the largest group
+  let selectedPair = _.max(SRIDGeometriesPairs, function (pair) {
+    return pair[1].length;
+  });
+  let selectedSRID = parseInt(selectedPair[0]);
+  let selectedGeometries = selectedPair[1];
+
+  let geoJSONs = _.map(selectedGeometries, function (geometry) {
+    return geometry.toGeoJSON();
+  });
+
+  let getPopupContent;
+  if (columns.length >= 2) {
+    // add popup when geometry has properties
+    getPopupContent = function (geojson) {
+      let geometry = selectedGeometries[geoJSONs.indexOf(geojson)];
+      let row = geometryItemMap.get(geometry);
+      let retVal = [];
+      for (const col of columns) {
+        if(col.key === column.key) {
+          continue;
+        }
+        retVal.push({
+          'column': col.display_name,
+          'value': row[col.key],
+        });
+      }
+      return retVal;
+    };
+  }
+
+  if (mixedSRID) {
+    infoList.push(gettext('Geometries with non-SRID %s not rendered.', selectedSRID));
+  }
+
+  return {
+    'geoJSONs': geoJSONs,
+    'selectedSRID': selectedSRID,
+    'getPopupContent': getPopupContent,
+    'infoList': infoList,
+  };
+}
+
+
+function PopupTable({data}) {
+
+  return (
+    <table className='GeometryViewer-table'>
+      <tbody>
+        {data.map((row)=>{
+          return (
+            <tr key={row.column}>
+              <td className={'GeometryViewer-tableCell ' + 'GeometryViewer-tableCellHead'}>{row.column}</td>
+              <td className='GeometryViewer-tableCell'>{`${row.value}`}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+}
+
+PopupTable.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape({
+    column: PropTypes.string,
+    value: PropTypes.any,
+  })),
+};
+
+function GeoJsonLayer({data, setHomeCoordinates}) {
+  const vectorLayerRef = useRef(null);
+  const mapObj = useMap();
+  useEffect(() => {
+    if(!vectorLayerRef.current) return;
+    if(data.geoJSONs.length <= 0) return;
+    let bounds = vectorLayerRef.current.getBounds().pad(0.1);
+    let maxLength = Math.max(bounds.getNorth() - bounds.getSouth(),
+      bounds.getEast() - bounds.getWest());
+    let minZoom = 0;
+    if(data.selectedSRID !== 4326) {
+      if (maxLength >= 180) {
+        // calculate the min zoom level to enable the map to fit the whole geometry.
+        minZoom = Math.floor(Math.log2(360 / maxLength)) - 2;
+      }
+    }
+    mapObj.setMinZoom(minZoom);
+    if (maxLength > 0) {
+      mapObj.fitBounds(bounds);
+    } else {
+      mapObj.setView(bounds.getCenter(), mapObj.getZoom());
+    }
+    setHomeCoordinates({bounds,maxLength});
+  }, [data]);
+
+  return (
+    <GeoJSON
+      ref={vectorLayerRef}
+      pointToLayer={(_feature, latlng)=>{
+        return Leaflet.circleMarker(latlng, {
+          radius: 4,
+          weight: 3,
+        });
+      }}
+      style={{weight: 2}}
+      onEachFeature={(feature, layer)=>{
+        if(_.isFunction(data.getPopupContent)) {
+          layer.bindPopup((l)=>{
+            const popupContentNode = (
+              <Theme>
+                <PopupTable data={data.getPopupContent(l.feature.geometry)}/>
+              </Theme>
+            );
+            return ReactDOMServer.renderToString(popupContentNode);
+          }, {
+            closeButton: false,
+            minWidth: 260,
+            maxWidth: 300,
+            maxHeight: 300,
+          });
+        }
+      }}
+      data={data.geoJSONs}
+    />
+  );
+}
+
+GeoJsonLayer.propTypes = {
+  data: PropTypes.shape({
+    geoJSONs: PropTypes.array,
+    selectedSRID: PropTypes.number,
+    getPopupContent: PropTypes.func,
+    infoList: PropTypes.array,
+  }),
+  setHomeCoordinates: PropTypes.func,
+};
+
+function TheMap({data, customTileProvider}) {
+  const mapObj = useMap();
+  const resetLayersKey = useRef(0);
+  const zoomControlWithHome = useRef(null);
+  const homeCoordinates = useRef(null);
+  useEffect(()=>{
+    resetLayersKey.current++;
+
+    zoomControlWithHome.current = Leaflet.control.zoom({
+      zoomHomeIcon: 'home',
+      zoomHomeTitle: 'Home',
+      homeCoordinates: null,
+      homeZoom: null,
+      maxLength: null,
+    });
+
+    zoomControlWithHome.current._zoomHome = function () {
+      let obj = this;
+      if (obj.options.maxLength > 0) {
+        obj._map.fitBounds(obj.options.homeCoordinates);
+      } else {
+        obj.options.homeCoordinates && obj._map.setView(obj.options.homeCoordinates.getCenter(), obj.options.homeZoom);
+      }
+    };
+
+    zoomControlWithHome.current.onAdd = function (map) {
+      let obj = this;
+      let controlName = 'leaflet-control-zoom',
+        container = Leaflet.DomUtil.create('div', controlName + ' leaflet-bar'),
+        options = obj.options;
+
+      if (options.homeCoordinates === null) {
+        options.homeCoordinates = homeCoordinates.current?.bounds;
+      }
+      if (options.homeZoom === null) {
+        options.homeZoom = homeCoordinates.current?.bounds ? map.getBoundsZoom(homeCoordinates.current?.bounds) : 0;
+      }
+      if(options.maxLength === null) {
+        options.maxLength = homeCoordinates.current?.maxLength;
+      }
+
+      let zoomHomeText = `<i class="fa fa-${options.zoomHomeIcon}"></i>`;
+
+      obj._zoomInButton = obj._createButton(options.zoomInText, options.zoomInTitle, controlName + '-in', container, obj._zoomIn.bind(this));
+      obj._createButton(zoomHomeText, options.zoomHomeTitle, controlName + '-home', container, obj._zoomHome.bind(this));
+      obj._zoomOutButton = obj._createButton(options.zoomOutText, options.zoomOutTitle, controlName + '-out', container, obj._zoomOut.bind(this));
+
+      obj._updateDisabled();
+      map.on('zoomend zoomlevelschange', obj._updateDisabled, this);
+
+      return container;
+    };
+    zoomControlWithHome.current.addTo(mapObj);
+
+    return ()=>{
+      zoomControlWithHome.current?.remove();
+    };
+  }, [data]);
+
+  const setHomeCoordinates = (data) => {
+    homeCoordinates.current = data;
+  };
+
+  return (
+    <>
+      {data.infoList.length > 0 && (
+        <EmptyPanelMessage text={data.infoList.join(' ')} style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 1000,
+          pointerEvents: 'none',
+        }} />
+      )}
+      {data.selectedSRID === 4326 &&
+      <LayersControl position="topright">
+        {getBaseLayers(customTileProvider).map((layer)=>(
+          <LayersControl.BaseLayer key={`${layer.name}::${layer.url}`} name={layer.name} checked={layer.checked}>
+            <TileLayer
+              url={layer.url}
+              {...(!_.isUndefined(layer.maxZoom) ? {maxZoom: layer.maxZoom} : {})}
+              {...(layer.attribution ? {attribution: layer.attribution} : {})}
+              {...(layer.subdomains ? {subdomains: layer.subdomains} : {})}
+            />
+          </LayersControl.BaseLayer>
+        ))}
+      </LayersControl>}
+      <GeoJsonLayer key={resetLayersKey.current} data={data} setHomeCoordinates={setHomeCoordinates} />
+    </>
+  );
+}
+TheMap.propTypes = {
+  data: PropTypes.shape({
+    geoJSONs: PropTypes.array,
+    selectedSRID: PropTypes.number,
+    getPopupContent: PropTypes.func,
+    infoList: PropTypes.array,
+  }),
+  customTileProvider: PropTypes.object,
+};
+
+
+export function GeometryViewer({rows, columns, column}) {
+
+  const mapRef = React.useRef();
+  const contentRef = React.useRef();
+  const queryToolCtx = React.useContext(QueryToolContext);
+  // Subscribed to the preferences store so a preference change while the
+  // viewer tab is open takes effect immediately (the props are frozen at
+  // tab-open time, hence not passed from the parent).
+  const prefStore = usePreferences();
+
+  const customTileProvider = useMemo(() => {
+    return getCustomTileProvider(prefStore.getPreferencesForModule('sqleditor'));
+  }, [prefStore.version]);
+
+  const currentColumnKey = useMemo(() => column?.key, [column]);
+
+  const data = React.useMemo(() => {
+    if (!currentColumnKey) {
+      const hasGeometryColumn = columns.some(c => c.cell === 'geometry' || c.cell === 'geography');
+      return {
+        'geoJSONs': [],
+        'selectedSRID': 0,
+        'getPopupContent': undefined,
+        'infoList': hasGeometryColumn
+          ? [gettext('Query complete. Use the Geometry Viewer button in the Data Output tab to visualize results.')]
+          : [gettext('No spatial data found. At least one geometry or geography column is required for visualization.')],
+      };
+    }
+    const parsed = parseData(rows, columns, column);
+    if (customTileProvider?.invalid) {
+      parsed.infoList.push(gettext('Custom tile provider URL is invalid and was ignored. It must start with http(s):// and contain the {x}, {y} and {z} placeholders.'));
+    }
+    return parsed;
+  }, [rows, columns, column, currentColumnKey, customTileProvider]);
+
+  useEffect(()=>{
+    let timeoutId;
+    const contentResizeObserver = new ResizeObserver(()=>{
+      clearTimeout(timeoutId);
+      if(queryToolCtx?.docker?.isTabVisible(PANELS.GEOMETRY)) {
+        timeoutId = setTimeout(function () {
+          mapRef.current?.invalidateSize();
+        }, 100);
+      }
+    });
+    if(contentRef.current) {
+      contentResizeObserver.observe(contentRef.current);
+    }
+    return () => {
+      clearTimeout(timeoutId);
+      contentResizeObserver.disconnect();
+    };
+  }, [queryToolCtx]);
+
+  // Dynamic CRS and TileLayer options are not supported. Use srid, column
+  // key and the custom tile provider config as key and recreate the map on
+  // change.
+  const providerKey = customTileProvider && !customTileProvider.invalid
+    ? `${customTileProvider.crs}|${customTileProvider.url}|${customTileProvider.name}|${customTileProvider.maxZoom}|${customTileProvider.attribution}`
+    : 'default';
+  return (
+    <StyledBox ref={contentRef} width="100%" height="100%" key={`${data.selectedSRID}-${currentColumnKey || 'none'}-${providerKey}`}>
+      <MapContainer
+        crs={getMapCrs(data.selectedSRID, customTileProvider)}
+        zoom={2} center={[20, 100]}
+        zoomControl={false}
+        preferCanvas={true}
+        className='GeometryViewer-mapContainer'
+        ref={mapRef}
+      >
+        <TheMap data={data} customTileProvider={customTileProvider}/>
+      </MapContainer>
+    </StyledBox>
+  );
+}
+
+GeometryViewer.propTypes = {
+  rows: PropTypes.array,
+  columns: PropTypes.array,
+  column: PropTypes.object,
+};

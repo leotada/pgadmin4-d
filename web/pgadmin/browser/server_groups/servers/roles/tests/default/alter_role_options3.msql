@@ -1,0 +1,3 @@
+REVOKE test_rolemembership_1 FROM "Role2_$%{}[]()&*^!@""'`\/#";
+
+REVOKE "Role2_$%{}[]()&*^!@""'`\/#" FROM test_rolemembership_3;

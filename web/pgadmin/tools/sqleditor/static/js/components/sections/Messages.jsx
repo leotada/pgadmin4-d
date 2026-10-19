@@ -1,0 +1,45 @@
+/////////////////////////////////////////////////////////////
+//
+// pgAdmin 4 - PostgreSQL Tools
+//
+// Copyright (C) 2013 - 2026, The pgAdmin Development Team
+// This software is released under the PostgreSQL Licence
+//
+//////////////////////////////////////////////////////////////
+import { styled } from '@mui/material/styles';
+import React from 'react';
+import { QueryToolEventsContext } from '../QueryToolComponent';
+import { QUERY_TOOL_EVENTS } from '../QueryToolConstants';
+
+const StyledTextarea = styled('textarea')(({theme}) => ({
+  whiteSpace: 'pre-wrap',
+  fontFamily: '"Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+  padding: '5px 10px',
+  overflow: 'auto',
+  height: '100%',
+  width: '100%',
+  fontSize: '12px',
+  backgroundColor: theme.palette.background.default,
+  color: theme.palette.text.primary,
+  border: 'none',
+  outline: 'none',
+  resize: 'none',
+  ...theme.mixins.fontSourceCode,
+}));
+
+export function Messages() {
+
+  const [messageText, setMessageText] = React.useState('');
+  const eventBus = React.useContext(QueryToolEventsContext);
+  React.useEffect(()=>{
+    eventBus.registerListener(QUERY_TOOL_EVENTS.SET_MESSAGE, (text, append=false)=>{
+      setMessageText((prev)=>{
+        if(append) {
+          return prev+text;
+        }
+        return text;
+      });
+    });
+  }, []);
+  return <StyledTextarea value={messageText} readOnly/>;
+}

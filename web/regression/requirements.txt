@@ -1,0 +1,36 @@
+###############################################################################
+#
+# IMPORTANT:
+#
+# If runtime or build time dependencies are changed in this file, the committer
+# *must* ensure the DEB and RPM package maintainers are informed as soon as
+# possible.
+#
+###############################################################################
+
+#####################################
+# Include all the common dependencies
+#####################################
+-r ../../requirements.txt
+
+###########################################################
+# Add all the development dependencies here
+# The packages listed below are sorted alphabetically. It
+# is recommended to add new packages in alphabetical order.
+# However, exceptions can be made to preserve dependency
+# order—please add a comment in such cases and specify the
+# relevant packages.
+###########################################################
+extras==1.0.0
+fixtures==4.3.2
+linecache2==1.0.0
+pbr==7.0.3
+pycodestyle>=2.14.0
+python-mimeparse==2.0.0
+selenium==4.44.0; python_version <= '3.9'
+selenium==4.48.0; python_version > '3.9'
+testscenarios==0.5.0; python_version <= '3.9'
+testscenarios==0.7.0; python_version > '3.9'
+testtools==2.7.2; python_version <= '3.9'
+testtools==2.9.1; python_version > '3.9'
+traceback2==1.4.0
